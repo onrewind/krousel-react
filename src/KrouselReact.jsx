@@ -1,5 +1,5 @@
 import React from 'react';
-import Krousel from 'krousel';
+import Krousel from '@onrewind/krousel';
 import Arrow from './Arrow';
 const { useState, useEffect, useRef } = React;
 

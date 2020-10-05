@@ -1,6 +1,6 @@
 {
   "name": "@onrewind/krousel-react",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "React wrapper for krousel",
   "main": "dist/krousel-react.cjs.js",
   "jsnext:main": "dist/krousel-react.es.js",
