@@ -1,5 +1,5 @@
 {
-  "name": "krousel-react",
+  "name": "@onrewind/krousel-react",
   "version": "0.1.4",
   "description": "React wrapper for krousel",
   "main": "dist/krousel-react.cjs.js",
