@@ -49,7 +49,7 @@ export default {
       exports: 'named',
       globals: {
         react: 'React',
-        krousel: 'Krousel',
+        '@onrewind/krousel': 'Krousel',
       },
     },
     output,

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import 'krousel/dist/krousel.css';
+import '@onrewind/krousel/dist/krousel.css';
 import Krousel from '..';
 import './theme.scss';
 import styles from './common.scss';

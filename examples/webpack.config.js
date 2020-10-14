@@ -24,7 +24,7 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        exclude: /(node_modules|krousel\/dist)/,
+        exclude: /(node_modules|@onrewind\/krousel\/dist)/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include: /(node_modules|krousel\/dist)/,
+        include: /(node_modules|@onrewind\/krousel\/dist)/,
         use: [
           MiniCssExtractPlugin.loader,
           {

@@ -1,13 +1,13 @@
-# krousel-react
+# @onrewind/krousel-react
 
-React wrapper for [krousel](https://github.com/VincentCharpentier/krousel/) - a javascript carousel library
+React wrapper for [krousel](https://github.com/onrewind/krousel/) - a javascript carousel library
 
-[Check the demo here](https://vincentcharpentier.github.io/krousel-react/)
+[Check the demo here](https://onrewind.github.io/krousel-react/)
 
 ## Installation
 
 ```bash
-npm install --save krousel krousel-react
+npm install --save @onrewind/krousel @onrewind/krousel-react
 ```
 
 ## Features
@@ -28,8 +28,8 @@ npm install --save krousel krousel-react
 Pass options as properties to Krousel
 
 ```jsx
-import 'krousel/dist/krousel.css';
-import Krousel from 'krousel-react';
+import '@onrewind/krousel/dist/krousel.css';
+import Krousel from '@onrewind/krousel-react';
 
 // render
 <Krousel infinite={true} slidesToShow={2}>
@@ -41,6 +41,6 @@ import Krousel from 'krousel-react';
 </Krousel>
 ```
 
-You can find the list of options [here](https://github.com/VincentCharpentier/krousel#options)
+You can find the list of options [here](https://github.com/onrewind/krousel#options)
 
 To customize arrows you can also provide a React component instance to `prevArrow` and `nextArrow` options (see examples)

@@ -1,59 +1,69 @@
 {
   "name": "@onrewind/krousel-react",
   "version": "0.1.6",
-  "description": "React wrapper for krousel",
-  "main": "dist/krousel-react.cjs.js",
-  "jsnext:main": "dist/krousel-react.es.js",
-  "module": "dist/krousel-react.es.js",
-  "scripts": {
-    "build": "npm run build:es & npm run build:umd & npm run build:cjs",
-    "build:es": "rollup --config --environment MINIFY,FORMAT:es",
-    "build:umd": "rollup --config --environment MINIFY,FORMAT:umd",
-    "build:cjs": "rollup --config --environment MINIFY,FORMAT:cjs",
-    "examples:build": "webpack -p --config ./examples/webpack.config.js",
-    "examples:serve": "http-server docs -p 8083",
-    "examples:watch": "webpack -d --config ./examples/webpack.config.js --watch",
-    "prettier": "prettier --write src/*",
-    "publish": "clean-publish",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "rollup --config --environment FORMAT:es --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VincentCharpentier/krousel-react.git"
-  },
+  "description": "React wrapper for @onrewind/krousel",
   "keywords": [
     "react",
     "krousel",
     "carousel",
-    "slider"
+    "slider",
+    "@onrewind/krousel"
   ],
-  "author": "Vincent Charpentier",
-  "license": "MIT",
+  "homepage": "https://github.com/onrewind/krousel-react#readme",
   "bugs": {
-    "url": "https://github.com/VincentCharpentier/krousel-react/issues"
+    "url": "https://github.com/onrewind/krousel-react/issues"
   },
-  "homepage": "https://github.com/VincentCharpentier/krousel-react#readme",
-  "peerDependencies": {
-    "krousel": "^0.1.0",
-    "react": "^16.8.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onrewind/krousel-react.git"
   },
+  "license": "MIT",
+  "author": "On Rewind",
+  "main": "dist/krousel-react.cjs.js",
+  "module": "dist/krousel-react.es.js",
+  "jsnext:main": "dist/krousel-react.es.js",
+  "scripts": {
+    "build": "npm run build:es & npm run build:umd & npm run build:cjs",
+    "build:cjs": "rollup --config --environment MINIFY,FORMAT:cjs",
+    "build:es": "rollup --config --environment MINIFY,FORMAT:es",
+    "build:umd": "rollup --config --environment MINIFY,FORMAT:umd",
+    "examples:build": "webpack -p --config ./examples/webpack.config.js",
+    "examples:serve": "http-server docs -p 8083",
+    "examples:watch": "webpack -d --config ./examples/webpack.config.js --watch",
+    "publish": "clean-publish",
+    "size": "npm run build && size-limit",
+    "watch": "rollup --config --environment FORMAT:es --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "package.json": [
+      "sort-package-json",
+      "prettier --write"
+    ],
+    "src/*.js": "prettier --write"
+  },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "7.8.7",
+    "@babel/core": "7.9.0",
     "@babel/plugin-proposal-class-properties": "7.8.3",
     "@babel/plugin-transform-runtime": "7.8.3",
-    "@babel/preset-env": "7.8.7",
-    "@babel/preset-react": "7.8.3",
+    "@babel/preset-env": "7.9.5",
+    "@babel/preset-react": "7.10.4",
+    "@onrewind/krousel": "0.3.1",
     "@rollup/plugin-commonjs": "11.0.2",
     "@rollup/plugin-json": "4.0.2",
     "@rollup/plugin-node-resolve": "7.1.1",
     "@rollup/plugin-replace": "2.3.1",
+    "@size-limit/file": "4.6.0",
     "babel-loader": "8.0.6",
     "clean-publish": "1.1.6",
     "css-loader": "3.4.2",
     "html-webpack-plugin": "3.2.0",
     "http-server": "0.12.1",
-    "krousel": "0.1.2",
     "mini-css-extract-plugin": "0.9.0",
     "node-sass": "4.13.1",
     "prettier": "1.19.1",
@@ -63,7 +73,21 @@
     "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-terser": "5.3.0",
     "sass-loader": "8.0.2",
+    "size-limit": "4.6.0",
+    "sort-package-json": "1.46.0",
     "webpack": "4.42.0",
     "webpack-cli": "3.3.11"
-  }
+  },
+  "peerDependencies": {
+    "@onrewind/krousel": "0.3.1",
+    "react": "16.8.0"
+  },
+  "size-limit": [
+    {
+      "path": [
+        "dist"
+      ],
+      "limit": "5KB"
+    }
+  ]
 }
