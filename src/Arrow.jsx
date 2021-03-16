@@ -8,7 +8,7 @@ const Arrow = React.forwardRef(({ arrow }, ref) => {
       ref,
     });
   } else {
-    result = arrow;
+    result = <></>;
   }
   return result;
 });

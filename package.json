@@ -1,6 +1,6 @@
 {
   "name": "@onrewind/krousel-react",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "React wrapper for @onrewind/krousel",
   "keywords": [
     "react",
@@ -53,7 +53,7 @@
     "@babel/plugin-transform-runtime": "7.8.3",
     "@babel/preset-env": "7.9.5",
     "@babel/preset-react": "7.10.4",
-    "@onrewind/krousel": "0.3.3",
+    "@onrewind/krousel": "0.4.3",
     "@rollup/plugin-commonjs": "11.0.2",
     "@rollup/plugin-json": "4.0.2",
     "@rollup/plugin-node-resolve": "7.1.1",
@@ -67,8 +67,8 @@
     "mini-css-extract-plugin": "0.9.0",
     "node-sass": "4.13.1",
     "prettier": "1.19.1",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "rollup": "1.32.1",
     "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-terser": "5.3.0",
@@ -79,8 +79,8 @@
     "webpack-cli": "3.3.11"
   },
   "peerDependencies": {
-    "@onrewind/krousel": "0.3.3",
-    "react": ">=16.8.0"
+    "@onrewind/krousel": "0.4.3",
+    "react": "17.0.1"
   },
   "size-limit": [
     {
